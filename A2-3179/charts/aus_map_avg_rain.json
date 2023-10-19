@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  
+    "title": "",
+    "projection": {"type": "equirectangular"},
+    "width": 800,
+    "height": 400,
+    "layer": [
+      {
+        "data": {
+          "url": "../topology/ne_10m_admin_1_states_provinces.json",
+          "format": {"type": "topojson", "feature": "ne_10m_admin_1_states_provinces"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgrey", "stroke": "white"}
+      },
+
+      {
+       
+        "data": {
+          "url": "../topology/ne_10m_populated_places.json",
+          "format": {"type": "topojson", "feature": "ne_10m_populated_places"}
+        },
+
+        "transform": [{
+            "lookup": "properties.NAME",
+            "from" : {
+                "data" : {
+                    "url": "../data/clean/AustraliaWeather.csv"   ,
+                    "format": {"type": "csv"}
+                },
+                "key": "location",
+                "fields": ["rainfall", "min_temp", "max_temp", "location"]
+            }
+        }],
+    
+        "mark": {"type": "geoshape", "stroke": "black"},
+        "encoding": {"color" : {"field": "rainfall", "type": "quantitative"},
+                     "size": {"field": "rainfall"}, "tooltip": [
+                      {"field": "location", "title": "Town"},
+                      {"field": "rainfall", "title": "Average Rainfall"},
+                      {"field": "min_temp", "title": "Min Temperature Recorded"},
+                      {"field": "max_temp", "title": "Max Temperature Recorded"}
+                     ]}
+      }
+    ]
+  }

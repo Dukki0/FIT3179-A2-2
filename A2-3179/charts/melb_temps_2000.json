@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "2000" },
+
+   
+
+ 
+            
+            "layer": [{   
+            "data": {
+                "url": "../data/clean/Melbourne_Temperatures_2000.csv",
+                "format": {"type": "csv"}
+            
+            },
+            
+            "mark": "circle",
+            "encoding": {
+                "x": { "field": "date", "type": "ordinal", "sort": {"field": "id"}},
+                "y": { "field": "temp", "type": "quantitative", "aggregate": "average", "title": "Avg. Temperature"},
+                "color": {"value": "blue"}
+            
+            }
+        },
+            
+        {   
+            "data": {
+                "url": "../data/clean/Sydney_Temperatures_2000.csv",
+                "format": {"type": "csv"}
+            
+            },
+            
+            "mark": "circle",
+            "encoding": {
+                "x": { "field": "date", "type": "ordinal", "sort": {"field": "id"}},
+                "y": { "field": "temp", "type": "quantitative", "aggregate": "average"},
+                "color": {"value": "red"}
+            }
+        }]
+
+
+}
+    

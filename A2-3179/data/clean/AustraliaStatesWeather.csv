@@ -1,0 +1,113 @@
+,location,year,temp
+0,Australian Capital Territory,2000,5.265
+1,Australian Capital Territory,2001,6.665
+2,Australian Capital Territory,2002,6.59
+3,Australian Capital Territory,2003,6.777
+4,Australian Capital Territory,2004,6.476
+5,Australian Capital Territory,2005,7.157
+6,Australian Capital Territory,2006,5.175
+7,Australian Capital Territory,2007,5.532
+8,Australian Capital Territory,2008,7.887
+9,Australian Capital Territory,2009,6.687
+10,Australian Capital Territory,2010,5.937
+11,Australian Capital Territory,2011,6.144
+12,Australian Capital Territory,2012,5.904
+13,Australian Capital Territory,2013,6.62
+14,New South Wales,2000,10.042
+15,New South Wales,2001,11.473
+16,New South Wales,2002,11.196
+17,New South Wales,2003,11.672
+18,New South Wales,2004,11.011
+19,New South Wales,2005,12.255
+20,New South Wales,2006,9.714
+21,New South Wales,2007,9.331
+22,New South Wales,2008,12.455
+23,New South Wales,2009,11.719
+24,New South Wales,2010,10.859000000000002
+25,New South Wales,2011,10.819
+26,New South Wales,2012,10.564
+27,New South Wales,2013,11.559
+28,Northern Territory,2000,16.817999999999998
+29,Northern Territory,2001,19.177
+30,Northern Territory,2002,17.874000000000002
+31,Northern Territory,2003,18.893
+32,Northern Territory,2004,18.579
+33,Northern Territory,2005,19.675
+34,Northern Territory,2006,16.791
+35,Northern Territory,2007,16.015
+36,Northern Territory,2008,19.125
+37,Northern Territory,2009,18.978
+38,Northern Territory,2010,18.136
+39,Northern Territory,2011,16.224999999999998
+40,Northern Territory,2012,16.820999999999998
+41,Northern Territory,2013,19.849
+42,Queensland,2000,15.907
+43,Queensland,2001,18.573
+44,Queensland,2002,17.227
+45,Queensland,2003,18.024
+46,Queensland,2004,17.12
+47,Queensland,2005,18.406
+48,Queensland,2006,16.810000000000002
+49,Queensland,2007,15.129
+50,Queensland,2008,18.277
+51,Queensland,2009,17.644000000000005
+52,Queensland,2010,17.155
+53,Queensland,2011,15.836
+54,Queensland,2012,16.01
+55,Queensland,2013,17.824
+56,South Australia,2000,11.906
+57,South Australia,2001,12.593
+58,South Australia,2002,12.824000000000002
+59,South Australia,2003,12.773
+60,South Australia,2004,13.453
+61,South Australia,2005,13.428
+62,South Australia,2006,10.507
+63,South Australia,2007,10.424
+64,South Australia,2008,13.252
+65,South Australia,2009,13.119000000000002
+66,South Australia,2010,12.074000000000002
+67,South Australia,2011,12.466
+68,South Australia,2012,11.758
+69,South Australia,2013,12.946
+70,Tasmania,2000,8.696
+71,Tasmania,2001,9.231
+72,Tasmania,2002,9.24
+73,Tasmania,2003,9.115
+74,Tasmania,2004,8.414
+75,Tasmania,2005,8.879
+76,Tasmania,2006,7.58
+77,Tasmania,2007,6.8340000000000005
+78,Tasmania,2008,9.422
+79,Tasmania,2009,8.89
+80,Tasmania,2010,8.225
+81,Tasmania,2011,8.421
+82,Tasmania,2012,8.067
+83,Tasmania,2013,8.734
+84,Victoria,2000,9.197
+85,Victoria,2001,10.373
+86,Victoria,2002,9.872
+87,Victoria,2003,10.031
+88,Victoria,2004,9.734
+89,Victoria,2005,10.465
+90,Victoria,2006,8.12
+91,Victoria,2007,8.296
+92,Victoria,2008,10.917
+93,Victoria,2009,9.762
+94,Victoria,2010,9.091
+95,Victoria,2011,9.656
+96,Victoria,2012,9.001
+97,Victoria,2013,9.803
+98,Western Australia,2000,15.117
+99,Western Australia,2001,15.88
+100,Western Australia,2002,16.139
+101,Western Australia,2003,16.255
+102,Western Australia,2004,16.78
+103,Western Australia,2005,15.828
+104,Western Australia,2006,14.757
+105,Western Australia,2007,14.954
+106,Western Australia,2008,16.445
+107,Western Australia,2009,16.224
+108,Western Australia,2010,16.573
+109,Western Australia,2011,15.486
+110,Western Australia,2012,15.802
+111,Western Australia,2013,16.176

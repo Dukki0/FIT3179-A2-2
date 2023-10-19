@@ -1,0 +1,13 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {"url": "../data/clean/AustraliaStatesWeather.csv"},
+    "mark": "rect",
+    "encoding": {
+      "y": {"field": "location", "type": "nominal", "axis": {"labelFontWeight":"bold", "title":null}},
+      "x": {"field": "year", "type": "ordinal"},
+      "color": {"field": "temp", "type": "quantitative", "scale": {"range": ["#83769C", "#FFA300","#FF004D"]}, "legend": {"title": "Temperature"}}
+    },
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+  }

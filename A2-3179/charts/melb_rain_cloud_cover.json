@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Evaporation With Sunshine" },
+
+    
+        
+        "data": {
+            "url": "../data/clean/melb_2010_rain.csv",
+            "format": {"type": "csv"}
+        
+        },
+        
+        "mark": "circle",
+        "encoding": {
+            "x": { "field": "Evaporation", "type": "quantitative"},
+            "y": { "field": "Sunshine", "type": "quantitative"},
+            "size": {"field": "Rainfall", "type": "quantitative"},
+            "color": {"field": "Rainfall", "scale": {"type": "linear"}, "legend": null}
+        }
+
+    
+
+
+}
+    

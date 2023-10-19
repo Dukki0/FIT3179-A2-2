@@ -1,0 +1,5 @@
+avg total temp for 1900-2013 calculated from summing average temps.
+used in melb_temp_stats as normalizing factors.
+
+melb : 18.9475
+syd : 19.62

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<!-- -------------------- -->
+
+<!-- Visualization Header -->
+
+<!-- -------------------- -->
+
+
+
+<!-- Using pure.css -->
+<link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- connect to google fonts and grab the Young-Serif Font.-->
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+
+
+<head>
+
+    <!-- VEGA LITE -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
+
+</head>
+
+<body>
+
+    <h1 style="text-align: center; font-size: 64px;">Rainfall and Temperature In Australia</h1>
+    <h3 style="text-align: center;"> 29693071 Alex Fletcher </h3>
+        
+
+    <div class="page" style="padding: 16px;">
+
+        <h1 style="text-align: center;">Rainfall and Air Quality</h1>
+      
+        <h2> How does the weather in Australia fair? </h2>
+        <p style="text-align: center;"> Australia has an Air Quality Index (AQI) of 92, Placing it in the "Moderate" Status</p>
+        <p style="text-align: center;"> Scales are normalized in proportion to the USA which has the worst AQI of 474!</p>
+        <P style="color: grey; text-align: center;"> GREY values indicate missing data.</P> 
+        <!-- General Air Quality -->
+
+        <div class="page" style="background-color: white; padding: 8px;">
+            <div id="world_air_quality" class="vis-container" style="align-items: center;"></div>
+        </div>
+        
+        <!-- Humidity + Pressure : Rainfall -->
+
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+              <div class="description description-left">
+                <h2>Humidity And Pressure</h2>
+                <p>These charts show rainfall in relation to humidity and pressure in Australia.</p>
+                <p>Rain is heavier with low humidity and weakens when atmospheric pressure increases. </p>
+              </div>
+            </div>
+            <div class="pure-u-1-3">
+              <div id="melb_rain_humid_pressure" class="vis-container"></div>
+            </div>
+       
+            <div class="pure-u-1-3">
+                <div id="melb_rain_humid_pressure_2" class="vis-container"></div>
+              </div>
+         
+      
+        </div>
+
+        <!-- Temperatures and Cloud Cover : Rainfall -->
+
+
+        <div class="pure-g">
+       
+            <div class="pure-u-1-3">
+                <div class="description description-left">
+                  <h2>Max And Min Temperature</h2>
+                  <p>Low evaporation implies a higher chance of rain - but appears unrelated in much larger rainstorms </p>
+                  <p></p>
+                </div>
+            </div>
+
+                 
+            <div class="pure-u-1-3">
+                <div id="melb_rain_cloud_cover" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <div id="melb_rain_min_max" class="vis-container"></div>
+            </div>
+  
+        </div>
+
+             <!-- MAP : Rain-->
+
+
+              
+              <h2> How does the weather in Australia fair? </h2>
+              <p style="text-align: center;"> This map of Australia lists major towns or suburbs and their avg rainfall (in MM) per year.
+            
+              </p>
+              <p style="text-align: center;"> Coastal areas typically recieve more rain the inland. 
+                Northern towns like Darwin and Cairns are closer to the equator and sometimes experience hurricanes,
+                leading to a higher average rainfall.
+              </p>
+       
+             <div class="pure-g">
+                <div class="pure-u-1-2">
+                  <div id="aus_map_rain" class="vis-container"></div>
+                </div>
+           
+          
+            </div>
+    
+
+        
+        <!-- Temperatures Per Month 2000 - 2010 -->
+
+        <h1 style="text-align: center;"> Temperature Trends! </h1>
+
+        <h2> Monthly Temperatures from 2000-2010 </h2>
+              <p style="text-align: center;"> These charts examine temperature changes in Melbourne and Sydney.
+            
+              </p>
+              <p style="text-align: center; color: blue; font-weight: bold;"> BLUE = Melbourne</p>
+              <p style="text-align: center; color: red; font-weight: bold;"> RED = Sydney</p>
+
+        <div class="pure-g">
+ 
+
+            <div class="pure-u-1-3">
+              <div id="melb_temps_2000" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-3">
+                <div id="melb_temps_2005" class="vis-container"></div>
+            </div>
+       
+            <div class="pure-u-1-3">
+                <div id="melb_temps_2010" class="vis-container"></div>
+            </div>
+      
+        </div>
+        
+         <!-- Avg Temp over years -->
+
+        <div class="pure-g">
+    
+            <div class="pure-u-1-2">
+              <div id="melb_temps_stats" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="description description-right">
+                    <h2 style="text-align: center">Deviations in Temperature</h2>
+                    <p> Maybe a better example of misleading stats! There's a hint that overal temperature has increased
+                      - however deviation in average temperature is significant compared to the expected trend of increased temperature.  </p>
+                    <p> Even with average temperatures from 1990-2010, this data set isn't granular enough to show that small a change.</p>
+                    </div>
+            </div>
+       
+      
+        </div>
+
+        
+        <!-- Heat Map -->
+  
+        <div class="pure-g">
+    
+            <div class="pure-u-1-2">
+              <div id="aus_heatmap" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+                <div class="description description-right">
+                    <h2 style="text-align: center;">Citie's Seasonal Temperature</h2>
+                    <p>This heatmap provides the average temperature for each state for a given year.</p>
+                    <p>There's some noticable cool spots from 2006-2007.</p>
+                    <p style="color: gray; font-size: 12px;">Canberra may be an outlier/incorrectly derived. No way is it colder than Tasmania!</p>
+                  </div>
+            </div>
+       
+      
+        </div>
+
+
+
+              
+        <div class="pure-g">
+    
+            <div class="pure-u-1-2">
+              <div id="aus_city_temps" class="vis-container"></div>
+            </div>
+
+            <div class="pure-u-1-2">
+              <div class="description description-right">
+                  <h2 style="text-align: center;">Highest and Lowest Temperatures</h2>
+                  <p>Canberra has the lowest recorded minimum close to -10 degrees.</p>
+                  <p> Darwin has the smallest difference between its maximum and minimum temperatures.</p>
+                </div>
+          </div>
+            
+       
+      
+        </div>
+
+
+
+
+
+
+    <!-- Define all VEGA embeds -->
+    
+    <script type="text/javascript">
+               
+        var _chart_rain_min_max = "/charts/melb_rain_min_vs_max.json"
+        var _chart_rain_humid_pressure = "/charts/melb_rain_humidty_vs_pressure.json"
+        var _chart_rain_humid_pressure_2 = "/charts/melb_rain_humidty_vs_pressure_2.json"
+        var _chart_rain_cloud_cover = "/charts/melb_rain_cloud_cover.json"
+        var _chart_air_quality = "/charts/map_air_quality.json"
+
+        var _chart_melb_temps_2000 = "/charts/melb_temps_2000.json"
+        var _chart_melb_temps_2005 = "/charts/melb_temps_2005.json"
+        var _chart_melb_temps_2010 = "/charts/melb_temps_2010.json"
+
+        var _chart_melb_temp_line = "/charts/melb_temps_stats.json"
+        var _chart_heatmap = "/charts/aus_heatmap_temp.json"
+        var _map_aus_rainfall = "/charts/aus_map_avg_rain.json"
+        var _town_min_max = "/charts/aus_min_max_heats.json"
+
+        // -- Vega embeds! (looks like Promises?)
+        vegaEmbed('#melb_rain_min_max', _chart_rain_min_max).then((result) => {}).catch(console.error);
+        vegaEmbed('#melb_rain_humid_pressure', _chart_rain_humid_pressure).then((result) => {}).catch(console.error)
+        vegaEmbed('#melb_rain_humid_pressure_2', _chart_rain_humid_pressure_2).then((result) => {}).catch(console.error)
+        vegaEmbed('#melb_rain_cloud_cover', _chart_rain_cloud_cover).then((result) => {}).catch(console.error)
+
+        vegaEmbed('#world_air_quality', _chart_air_quality).then((result) => {}).catch(console.error)
+
+        vegaEmbed('#melb_temps_2000', _chart_melb_temps_2000).then((result) => {}).catch(console.error)
+        vegaEmbed('#melb_temps_2005', _chart_melb_temps_2005).then((result) => {}).catch(console.error)
+        vegaEmbed('#melb_temps_2010', _chart_melb_temps_2010).then((result) => {}).catch(console.error)
+
+        vegaEmbed('#melb_temps_stats', _chart_melb_temp_line).then((result) => {}).catch(console.error)
+        vegaEmbed('#aus_heatmap', _chart_heatmap).then((result) => {}).catch(console.error)
+        vegaEmbed('#aus_map_rain', _map_aus_rainfall).then((result) => {}).catch(console.error)
+        vegaEmbed('#aus_city_temps', _town_min_max).then((result) => {}).catch(console.error)
+
+    </script>
+
+</body>
+
+</html>

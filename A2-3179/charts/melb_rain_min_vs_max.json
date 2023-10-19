@@ -1,0 +1,25 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Min and Maximum Temperatures" },
+
+
+        
+        "data": {
+            "url": "../data/clean/melb_2010_rain.csv",
+            "format": {"type": "csv"}
+        
+        },
+        
+        "mark": "circle",
+        "encoding": {
+            "x": { "field": "MinTemp", "type": "quantitative", "title": "Lowest Temperature"},
+            "y": { "field": "MaxTemp", "type": "quantitative", "title": "Highest Temperature"},
+            "size": {"field": "Rainfall", "type": "quantitative"},
+            "color": {"field": "Rainfall", "scale": {"type": "linear"}, "legend": null}
+        }
+    
+    
+
+
+}
+    

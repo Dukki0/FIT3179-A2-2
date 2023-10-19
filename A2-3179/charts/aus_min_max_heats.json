@@ -1,0 +1,36 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "A simple bar chart with ranged data (aka Gantt Chart).",
+    "data": {
+        "url": "../data/clean/AustraliaWeather_short.csv"
+    },
+
+    "transform": [{"calculate": "datum.max_temp - datum.min_temp", "as": "span_temp"}],
+
+    "layer": [
+      
+    {"mark": "line",
+    "encoding": {
+      "x": {"field": "location", "type": "ordinal", "axis": {"title": "Location"}},
+      "y": {"field": "min_temp", "type": "quantitative", "axis": {"title": "Temperature"}},
+      "y2": {"field": "max_temp"},
+      "color": {"value": "#83769C"}
+  
+    }},
+
+    {"mark": "circle",
+    "encoding": {
+      "x": {"field": "location", "type": "ordinal"},
+      "y": {"field": "max_temp", "type": "quantitative"},
+      "color": {"type": "quantitative", "field": "max_temp", "scale": {"range": ["#83769C", "#FFA300","#FF004D"]}, "legend": null}
+    }},
+
+    {"mark": "circle",
+    "encoding": {
+      "x": {"field": "location", "type": "ordinal"},
+      "y": {"field": "min_temp", "type": "quantitative"},
+      "color": {"type": "quantitative", "field": "min_temp"}
+    }}
+
+    ]
+  }

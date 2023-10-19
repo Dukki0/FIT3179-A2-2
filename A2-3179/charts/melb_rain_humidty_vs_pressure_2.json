@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "3 PM"},
+
+    
+    "layer": [{
+        
+        "data": {
+            "url": "../data/clean/melb_2010_rain.csv",
+            "format": {"type": "csv"}
+        
+        },
+        
+        "mark": "circle",
+        "encoding": {
+            "x": { "field": "Pressure3pm", "type": "quantitative", "scale": {"domain":[950,1050]}, "title": "Pressure"},
+            "y": { "field": "Humidity3pm", "type": "quantitative", "title": "Humidity"},
+            "size": {"field": "Temp3pm", "type": "quantitative"},
+            "color": {"field": "Temp3pm", "scale": {"type": "linear"}, "legend": {"title": "Rainfall in MM"}}
+        }
+    }]
+    
+
+
+}
+    

@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": { "text": "Average Monthly Temperatures 1990 To 2010" },
+
+  
+    "layer": [{
+        
+        "transform": [{"calculate": "datum.avg_temp / 18.9475", "as": "MelbAvgTemp"}],
+        "data": {
+            "url": "../data/clean/Just_Melbourne_TempStats.csv",
+            "format": {"type": "csv"}
+        
+        },
+        
+        "mark": "line",
+        "encoding": {
+            "x": { "field": "date", "type": "ordinal"},
+            "y": { "field": "MelbAvgTemp", "type": "quantitative", "aggregate": "average", "scale": {"domain":[0.5,1.5]}},
+            "color": {"value": "blue"}
+        }
+    },
+
+    {   
+        "transform": [{"calculate": "datum.avg_temp / 19.62", "as": "SydAvgTemp"}],
+        "data": {
+            "url": "../data/clean/Just_Melbourne_TempStats.csv",
+            "format": {"type": "csv"}
+        
+        },
+        
+        "mark": "line",
+        "encoding": {
+            "x": { "field": "date", "type": "ordinal", "title":null},
+            "y": { "field": "SydAvgTemp", "type": "quantitative", "aggregate": "average", "title": "% Of Avg. Temperature"},
+            "color": {"value": "red"}
+        }
+    }]
+    
+
+
+}
+    
